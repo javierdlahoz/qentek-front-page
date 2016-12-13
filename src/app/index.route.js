@@ -1,4 +1,4 @@
-export function routerConfig ($routeProvider) {
+export function routerConfig ($routeProvider, $locationProvider) {
   'ngInject';
   $routeProvider
     .when('/', {
@@ -9,4 +9,6 @@ export function routerConfig ($routeProvider) {
     .otherwise({
       redirectTo: '/'
     });
+
+  $locationProvider.html5Mode(true);
 }

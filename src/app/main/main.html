@@ -5,17 +5,21 @@
       <acme-navbar creation-date="main.creationDate"></acme-navbar>
     </header>
 
-    <section class="jumbotron">
-      <h1>'Allo, 'Allo!</h1>
-      <p class="lead">
-        <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-      </p>
-      <md-button class="md-raised animated infinite" ng-class="main.classAnimation" ng-click="main.showToastr()">Splendid Toastr</md-button>
-      <p>
-        With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
-      </p>
-    </section>
+    <div class="full-width-landscape full-height" flex layout="row" layout-align="end center">
+      <div class="subheader">
+        <h1 class="big-header">Te acompañamos en<br>la creación de tu<br>éxito</h1>
+      </div>
+    </div>
+
+    <div class="purpose-wrapper" flex layout="column" layout-align="center center">
+      <h1>Propósito</h1>
+      <h2>En Qentek creamos un<br>
+        modelo de servicio<br>
+        innovador con el objetivo<br>
+        de hacer que tus proyectos<br>
+        sean exitosos.
+      </h2>
+    </div>
 
     <div class="techs" layout-align="center">
       <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">

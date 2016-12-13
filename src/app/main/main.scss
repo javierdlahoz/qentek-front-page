@@ -1,0 +1,24 @@
+.full-width-landscape {
+  height: 600px;
+  width: 100%;
+  background: url(/assets/images/paisaje.jpg) center no-repeat;
+  background-size: cover;
+
+  .subheader {
+    padding: 40px;
+    color: white;
+    text-align: right;
+  }
+}
+
+.big-header {
+  font-size: 42px;
+
+  @media (max-width: 480px) {
+    font-weight: 36px;
+  }
+}
+
+.purpose-wrapper {
+  padding: 80px;
+}
