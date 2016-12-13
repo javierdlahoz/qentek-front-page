@@ -17,6 +17,13 @@ a:hover, a:focus {
 }
 
 md-toolbar {
+  .md-button {
+    font-size: 20px;
+    text-transform: none;
+    font-weight: normal;
+    padding: 10px 20px;
+  }
+
   &.navbar {
     position: fixed;
     background-color: transparent;
@@ -49,6 +56,7 @@ md-toolbar {
 .md-button {
   .navbar-btn {
     background-color: transparent;
+
     a {
       background-color: transparent;
     }
