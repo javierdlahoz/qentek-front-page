@@ -37,6 +37,10 @@ md-toolbar {
         span {
           color: $primary-color;
         }
+
+        i {
+          color: $primary-color;
+        }
       }
     }
   }
@@ -49,6 +53,18 @@ md-toolbar {
       background-color: transparent;
     }
   }
+
+  &.menu-btn {
+    i {
+      font-size: 40px;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}
+
+.md-sidenav-right {
+  position: fixed;
 }
 
 .logo-wrapper {
@@ -60,8 +76,40 @@ md-toolbar {
   .logo {
     height: 120px;
   }
+}
 
-  .logo-fixed {
-    height: 42px;
+.logo-fixed {
+  height: 42px;
+}
+
+.md-icon-button {
+  width: 64px;
+  height: 64px;
+}
+
+.sidemenu {
+  padding: 0px;
+  width: 280px;
+  margin: 0px;
+
+  li {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+      a {
+        color: white;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
