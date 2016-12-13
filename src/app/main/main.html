@@ -1,6 +1,6 @@
 <div layout="vertical" layout-fill>
 
-  <md-content>
+  <md-content id="home">
     <header>
       <acme-navbar creation-date="main.creationDate"></acme-navbar>
     </header>
@@ -37,18 +37,51 @@
       <div class="sky-nav"></div>
     </div>
 
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-        <md-card-content>
-          <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-          <h3 class="md-title">{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-        </md-card-content>
-        <div class="md-action-buttons">
-          <md-button ng-href="{{ awesomeThing.url }}">Website</md-button>
+    <div class="projects-wrapper">
+      <div class="project-text" flex layout="column" layout-align="center center" id="processes">
+        <h1 class="big-header">Procesos</h1>
+
+        <div layout="column" layout-gt-sm="row" flex layout-align="center start" class="project-text">
+          <div layout="column" flex-gt-sm="50" layout-align="center center" flex>
+
+            <h2 flex class="text-center">Desarrollo de Productos</h2>
+
+            <div layout="row" flex layout-align="start center">
+              <div flex-gt-sm="40" flex layout-align="center center" hide-sm hide-xs>
+                <img src="/assets/images/iphone.png" class="process-iphone">
+              </div>
+              <div flex-gt-sm="60" flex layout-align="center center">
+                <p>Etapa semilla: Donde nos enfocamos en definir el concepto de nuestro cliente<br><br>
+                  Validación: Creación del primer prototipo<br><br>
+                  Versión 0: Creación de perfiles<br><br>
+                  Versión 1: Creación de módulos<br><br>
+                  Versión 2: Producto mínimo viable (Podrás ver en funcionamiento tu idea)</p>
+              </div>
+            </div>
+
+          </div>
+          <div layout="column" flex-gt-sm="50" layout-align="center start" layout-align-gt-sm="center center" flex style="width: 100%">
+            <h2 flex style="width: 100%; text-align: center">Mejora Continua</h2>
+
+            <div layout="row" flex layout-align="start center">
+              <div flex-gt-sm="60" flex layout-align="center center">
+                <ol>
+                  <li>Descubrimiento y Medición</li>
+                  <li>Planeación y análisis</li>
+                  <li>Diseño</li>
+                  <li>Implementación</li>
+                </ol>
+              </div>
+              <div flex-gt-sm="40" flex layout-align="center center" hide-sm hide-xs>
+                <img src="/assets/images/boy.png" class="process-iphone">
+              </div>
+            </div>
+
+          </div>
         </div>
-      </md-card>
+      </div>
     </div>
+
   </md-content>
 
 </div>

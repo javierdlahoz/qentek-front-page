@@ -4,14 +4,14 @@
     <img src="/assets/images/logo.png" class="logo-fixed">
   </div>
 
-  <section flex layout="row" layout-align="end center" hide-sm class="static-menu">
-      <md-button href="#" class="navbar-btn">Home</md-button>
+  <section flex layout="row" layout-align="end center" hide-sm hide-xs class="static-menu">
+      <md-button href="#home" class="navbar-btn">Home</md-button>
       <md-button href="#purpose" class="navbar-btn">Propósito</md-button>
-      <md-button href="#" class="navbar-btn">Proceso</md-button>
-      <md-button href="#" class="navbar-btn">Proyectos</md-button>
+      <md-button href="#processes" class="navbar-btn">Procesos</md-button>
+      <md-button href="#projects" class="navbar-btn">Proyectos</md-button>
   </section>
 
-  <section flex layout="row" hide-gt-sm layout-align="end center">
+  <section flex="100" layout="row" hide-gt-sm layout-align="end center">
     <md-button ng-click="vm.toogleMenu()" ng-hide="vm.isOpenRight()" class="menu-btn" layout-align="center center" layout="row">
       <i class="material-icons">menu</i>
     </md-button>
@@ -19,7 +19,7 @@
 
 </md-toolbar>
 
-<div class="logo-wrapper">
+<div class="logo-wrapper" hide-xs>
   <img src="/assets/images/logo2.png" class="logo" id="logo">
 </div>
 
@@ -30,10 +30,10 @@
   </md-toolbar>
   <md-content layout="column" layout-align="center start">
     <ul class="sidemenu">
-      <li><a href="">Home</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#purpose">Propósito</a></li>
-      <li><a href="">Proceso</a></li>
-      <li><a href="">Proyectos</a></li>
+      <li><a href="#processes">Procesos</a></li>
+      <li><a href="#projects">Proyectos</a></li>
     </ul>
   </md-content>
 
