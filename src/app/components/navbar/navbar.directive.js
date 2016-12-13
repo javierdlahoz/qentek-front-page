@@ -16,28 +16,49 @@ export function NavbarDirective() {
 }
 
 class NavbarController {
-  constructor (moment) {
+  constructor (moment, $scope, $timeout, $location) {
     'ngInject';
 
     // "this.creationDate" is available by directive option "bindToController: true"
     this.relativeDate = moment(this.creationDate).fromNow();
-    angular.element(document).ready(() => {
-      var navbar = document.getElementById("navbar");
-      var logoFixed = document.getElementById("logo-fixed");
-      var logo = document.getElementById("logo");
+    this.isScrolled = false;
+    this.init();
 
-      angular.element(document).on('scroll', () => {
-        if(window.pageYOffset == 0){
-          angular.element(navbar).removeClass('fixed');
-          angular.element(logoFixed).addClass('ng-hide');
-          angular.element(logo).removeClass('ng-hide');
-        }
-        else if(!angular.element(navbar).hasClass('fixed')){
-          angular.element(navbar).addClass('fixed');
-          angular.element(logoFixed).removeClass('ng-hide');
-          angular.element(logo).addClass('ng-hide');
-        }
-      });
+
+    $scope.$watch('$location.$$hash', () => {
+      if($location.hash() == ''){ this.hideFixed(); }
+      else { this.showFixed(); }
     });
+  }
+
+  getElements() {
+    this.navbar = document.getElementById("navbar");
+    this.logoFixed = document.getElementById("logo-fixed");
+    this.logo = document.getElementById("logo");
+  }
+
+  init() {
+    angular.element(document).on('scroll', () => {
+      if(window.pageYOffset == 0){
+        this.hideFixed();
+      }
+      else{
+        this.showFixed();
+      }
+    });
+  }
+
+  hideFixed(){
+    this.getElements();
+    angular.element(this.navbar).removeClass('fixed');
+    angular.element(this.logoFixed).addClass('ng-hide');
+    angular.element(this.logo).removeClass('ng-hide');
+  }
+
+  showFixed(){
+    this.getElements();
+    angular.element(this.navbar).addClass('fixed');
+    angular.element(this.logoFixed).removeClass('ng-hide');
+    angular.element(this.logo).addClass('ng-hide');
   }
 }
