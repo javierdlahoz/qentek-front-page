@@ -42,7 +42,7 @@ class NavbarController {
 
   isOpenRight() {
     return this.$mdSidenav('right').isOpen();
-  };
+  }
 
   getElements() {
     this.navbar = document.getElementById("navbar");

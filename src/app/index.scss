@@ -90,6 +90,56 @@ section.jumbotron {
   }
 }
 
+$primary-color: #86c551;
+$base-upper-color: #db89ff;
+$base-left-color: #623dff;
+$base-right-color: #ffdb89;
+$base-bottom-color: #ff89ad;
+
+$alternate-color-1: #ffc43d;
+$alternate-color-2: #ff633d;
+$alternate-color-3: #633dff;
+$alternate-color-4: #c43dff;
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.hide-on-md {
+  visibility: visible;
+}
+.show-on-md {
+  visibility: hidden;
+}
+
+md-toolbar {
+  &.md-theme-light {
+    background-color: $primary-color;
+  }
+}
+
+.md-button {
+  text-transform: none;
+}
+
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 990px) {
+  .hide-on-md {
+    visibility: hidden;
+  }
+
+  .show-on-md {
+    visibility: visible;
+  }
+}
+
+
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

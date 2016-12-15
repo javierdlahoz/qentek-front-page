@@ -1,0 +1,9 @@
+.dialog-container {
+  padding: 60px;
+  min-width: 600px;
+  text-align: center;
+
+  @media (max-width: 720px) {
+    min-width: auto;
+  }
+}

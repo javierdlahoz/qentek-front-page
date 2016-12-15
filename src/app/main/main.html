@@ -19,7 +19,37 @@
       <div class="mobile-nav"></div>
     </div>
 
-    <div class="development-wrapper"></div>
+    <div class="development-wrapper">
+      <h1 class="big-header text-center">Desarrollo</h1>
+      <div layout="column" flex layout-align="center center" layout-gt-md="row">
+        <div flex="100" flex-gt-md="50" layout-align="center center" layout-gt-md="column">
+          <h3 class="text-center">Desarrollo de Productos</h3>
+          <div class="development-circle">
+            <md-button class="upper-button" ng-click="main.openDialog($event, 'seed')">Etapa<br>Semilla</md-button>
+            <md-button class="left-button" ng-click="main.openDialog($event, 'version2')">Versión 2<br>*(PMV)</md-button>
+            <md-button class="right-button" ng-click="main.openDialog($event, 'version0')">Versión 0</md-button>
+            <md-button class="bottom-button" ng-click="main.openDialog($event, 'version1')">Versión 1</md-button>
+          </div>
+          <div class="schema-text text-center">
+            <p>Esquema General de un ciclo (~5 meses)</p>
+            <small>*(Podrás ver en funcionamiento tu idea)</small>
+          </div>
+        </div>
+        <div flex="100" flex-gt-sm="50" layout-align="center center" layout-gt-md="column">
+          <h3 class="text-center">Mejora Continua</h3>
+          <div class="development-circle alternate">
+            <md-button class="upper-button long-btn-txt" ng-click="main.openDialog($event, 'finding')">Descubrimiento y<br>Medición</md-button>
+            <md-button class="left-button long-btn-txt" ng-click="main.openDialog($event, 'implementacion')">Implementación</md-button>
+            <md-button class="right-button" ng-click="main.openDialog($event, 'planning')">Planeación<br>y Análisis</md-button>
+            <md-button class="bottom-button" ng-click="main.openDialog($event, 'design')">Diseño</md-button>
+          </div>
+          <div class="schema-text text-center">
+            <p>Esquema General de un ciclo (~5 meses)</p>
+            <small>&nbsp;</small>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="projects-wrapper">
       <div class="project-text" flex layout="column" layout-align="center center" id="projects">
