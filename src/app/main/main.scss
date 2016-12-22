@@ -134,6 +134,21 @@
 
 }
 
+.video-wrapper {
+  background-color: black;
+  padding: 80px;
+
+  iframe {
+    width: 640px;
+    height: 360px;
+
+    @media (max-width: 480px) {
+      width: 360px;
+      height: 180px;
+    }
+  }
+}
+
 .projects-wrapper {
 
   .project-text {
@@ -172,4 +187,33 @@
     width: 100%;
     height: 360px;
   }
+}
+
+.contact-wrapper {
+  background: url(/assets/images/contactanos.png) right no-repeat;
+  height: 640px;
+  background-color: $bg-secondary-color;
+  padding: 80px;
+
+  @media (max-width: 960px) {
+    height: 320px;
+    background: $bg-secondary-color;
+  }
+
+  .btn-contact {
+    color: white;
+    border: 3px solid;
+    padding: 20px 30px;
+    font-size: 24px;
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+}
+
+.footer {
+  font-size: 18px;
+  padding: 60px;
 }
